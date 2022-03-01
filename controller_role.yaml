@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: config-monitor-crd
+rules:
+- apiGroups:
+  - magalix.com
+  resources:
+  - configmonitor
+  - configmonitor/finalizers
+  verbs: [ get, list, create, update, delete, deletecollection, watch ]
+- apiGroups:
+  - ""
+  resources:
+  - configmap
+  verbs: [ get, list, create, update, delete, deletecollection, watch ]
+- apiGroups:
+  - ""
+  resources:
+  - pod
+  verbs: [ get, list, create, update, delete, deletecollection, watch ]
