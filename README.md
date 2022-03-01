@@ -4,7 +4,7 @@ Working example of https://www.magalix.com/blog/creating-custom-kubernetes-opera
 ## Steps 
 
 Follow the steps mentioned in https://www.magalix.com/blog/creating-custom-kubernetes-operators
-* kind load docker-image <flask-app/controller-image> --name <kind-cluster-name>
+* kind load docker-image <flask-app/controller-image> --name kind-cluster-name
 * Service account, role and rolebinding created for controller to resolve
   ```
   2022-03-01 14:22:07,539 Starting the service
